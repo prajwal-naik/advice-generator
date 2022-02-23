@@ -1,0 +1,131 @@
+* {
+    margin : 0;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
+body {
+    min-height: 100vh;
+    overflow-y:  scroll;
+    scrollbar-width: 0;
+    background-color: #323a49;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+body {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.container {
+    max-width: 24rem;
+    /* border: 2px solid red; */
+    background-color: #4e5d73;
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 40vh;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.containerDiv {
+    /* border: 2px solid black; */
+    width: 100%;
+    flex: 1;
+}
+
+.advice-id {
+    text-transform: uppercase;
+    color: hsl(150, 100%, 66%);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.quote {
+    color: #cee3e9;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    word-wrap: normal;
+}
+
+.separator {
+    display: flex;
+    /* border: 2px solid red; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex:1;
+    object-fit: contain;
+    
+}
+
+.diceContainer {
+    background-color: hsl(150, 100%, 66%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 9999px;
+    position: absolute;
+    bottom: -10%;
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+.diceContainer:hover {
+    box-shadow: 0 0 30px hsl(150, 100%, 66%);
+    transform: rotate(90deg)
+}
+
+.loader {
+    border: 3px solid #cee3e9; /* Light grey */
+    border-top: 3px solid #323a49; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    display: none;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+        padding-inline: 20px;
+    }
+  }
+
+
+
+
+/* .sepline {
+    height: 80px;
+    flex:1;
+    background-color: red
+}
+
+.separatorImage {
+    fill: black;
+} */
+
